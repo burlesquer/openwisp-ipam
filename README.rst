@@ -2,8 +2,8 @@
 openwisp-ipam
 =============
 
-.. image:: https://github.com/openwisp/openwisp-ipam/actions/workflows/ci.yml/badge.svg?branch=master
-  :target: https://github.com/openwisp/openwisp-ipam/actions/workflows/ci.yml?query=workflow%3AOpenWISP+Ipam+CI+Build%22
+.. image:: https://github.com/burlesquer/openwisp-ipam/actions/workflows/ci.yml/badge.svg?branch=master
+  :target: https://github.com/burlesquer/openwisp-ipam/actions/workflows/ci.yml?query=workflow%3AOpenWISP+Ipam+CI+Build%22
   :alt: CI Build status
 
 .. image:: https://coveralls.io/repos/openwisp/openwisp-ipam/badge.svg
@@ -18,7 +18,7 @@ openwisp-ipam
   :target: https://libraries.io/github/openwisp/openwisp-ipam#dependencies
   :alt: Dependency monitoring
 
-.. image:: https://github.com/openwisp/openwisp-ipam/raw/docs/docs/subnet_demo.gif
+.. image:: https://github.com/burlesquer/openwisp-ipam/raw/docs/docs/subnet_demo.gif
   :alt: Feature Highlights
 
 .. contents:: **Table of Contents**:
@@ -68,13 +68,13 @@ Install tarball:
 
 .. code-block:: shell
 
-    pip install https://github.com/openwisp/openwisp-ipam/tarball/master
+    pip install https://github.com/burlesquer/openwisp-ipam/tarball/master
 
 Alternatively you can install via pip using git:
 
 .. code-block:: shell
 
-    pip install -e git+git://github.com/openwisp/openwisp-ipam#egg=openwisp-ipam
+    pip install -e git+git://github.com/burlesquer/openwisp-ipam#egg=openwisp-ipam
 
 Installation for development
 ****************************
@@ -83,7 +83,7 @@ Install ``openwisp-ipam`` for development using following commands:
 
 .. code-block:: shell
 
-    git clone https://github.com/openwisp/openwisp-ipam.git
+    git clone https://github.com/burlesquer/openwisp-ipam.git
     cd openwisp-ipam
     pip install -e .
     pip install -r requirements-test.txt
@@ -131,14 +131,14 @@ REST API
 Live documentation
 ==================
 
-.. image:: https://github.com/openwisp/openwisp-ipam/raw/docs/docs/api-docs.png
+.. image:: https://github.com/burlesquer/openwisp-ipam/raw/docs/docs/api-docs.png
 
 A general live API documentation (following the OpenAPI specification) is available at ``/api/v1/docs/``.
 
 Browsable web interface
 =======================
 
-.. image:: https://github.com/openwisp/openwisp-ipam/raw/docs/docs/api-ui.png
+.. image:: https://github.com/burlesquer/openwisp-ipam/raw/docs/docs/api-ui.png
 
 Additionally, opening any of the endpoints `listed below <#list-of-endpoints>`_
 directly in the browser will show the `browsable API interface of Django-REST-Framework
@@ -149,7 +149,7 @@ Authentication
 ==============
 
 See openwisp-users: `authenticating with the user token
-<https://github.com/openwisp/openwisp-users#authenticating-with-the-user-token>`_.
+<https://github.com/burlesquer/openwisp-users#authenticating-with-the-user-token>`_.
 
 When browsing the API via the `Live documentation <#live-documentation>`_
 or the `Browsable web page <#browsable-web-interface>`_, you can also use
@@ -193,7 +193,7 @@ The rate descriptions used in ``DEFAULT_THROTTLE_RATES`` may include
 Get Next Available IP
 =====================
 
-A model method to fetch the next available IP address under a specific subnet. This method can also be accessed via a REST API: `openwisp_ipam/base/models.py <https://github.com/openwisp/openwisp-ipam/tree/master/tests/openwisp2/openwisp_ipam/base/models.py#L80>`_
+A model method to fetch the next available IP address under a specific subnet. This method can also be accessed via a REST API: `openwisp_ipam/base/models.py <https://github.com/burlesquer/openwisp-ipam/tree/master/tests/openwisp2/openwisp_ipam/base/models.py#L80>`_
 
 GET
 ---
@@ -526,17 +526,17 @@ which can be imported, extended and reused to create derivative apps.
 In order to implement your custom version of *openwisp-ipam*,
 you need to perform the steps described in this section.
 
-When in doubt, the code in the `test project <https://github.com/openwisp/openwisp-ipam/tree/master/tests/openwisp2/>`_ and
-the `sample app <https://github.com/openwisp/openwisp-ipam/tree/master/tests/openwisp2/sample_ipam/>`_
+When in doubt, the code in the `test project <https://github.com/burlesquer/openwisp-ipam/tree/master/tests/openwisp2/>`_ and
+the `sample app <https://github.com/burlesquer/openwisp-ipam/tree/master/tests/openwisp2/sample_ipam/>`_
 will serve you as source of truth:
 just replicate and adapt that code to get a basic derivative of
 *openwisp-ipam* working.
 
 If you want to add new users fields, please follow the `tutorial to extend the
-openwisp-users <https://github.com/openwisp/openwisp-users/#extend-openwisp-users>`_.
+openwisp-users <https://github.com/burlesquer/openwisp-users/#extend-openwisp-users>`_.
 As an example, we have extended *openwisp-users* to *sample_users* app and
 added a field ``social_security_number`` in the `sample_users/models.py
-<https://github.com/openwisp/openwisp-ipam/blob/master/tests/openwisp2/sample_users/models.py>`_.
+<https://github.com/burlesquer/openwisp-ipam/blob/master/tests/openwisp2/sample_users/models.py>`_.
 
 **Premise**: if you plan on using a customized version of this module,
 we suggest to start with it since the beginning, because migrating your data
@@ -650,8 +650,8 @@ in your ``settings.py``, but ensure it comes before
 
 Please refer to the following files in the sample app of the test project:
 
-- `sample_ipam/__init__.py <https://github.com/openwisp/openwisp-ipam/tree/master/tests/openwisp2/sample_ipam/__init__.py>`_.
-- `sample_ipam/apps.py <https://github.com/openwisp/openwisp-ipam/tree/master/tests/openwisp2/sample_ipam/apps.py>`_.
+- `sample_ipam/__init__.py <https://github.com/burlesquer/openwisp-ipam/tree/master/tests/openwisp2/sample_ipam/__init__.py>`_.
+- `sample_ipam/apps.py <https://github.com/burlesquer/openwisp-ipam/tree/master/tests/openwisp2/sample_ipam/apps.py>`_.
 
 You have to replicate and adapt that code in your project.
 
@@ -662,7 +662,7 @@ the `"Applications" section in the django documentation <https://docs.djangoproj
 ============================
 
 For the purpose of showing an example, we added a simple "details" field to the
-`models of the sample app in the test project <https://github.com/openwisp/openwisp-ipam/tree/master/tests/openwisp2/sample_ipam/models.py>`_.
+`models of the sample app in the test project <https://github.com/burlesquer/openwisp-ipam/tree/master/tests/openwisp2/sample_ipam/models.py>`_.
 
 You can add fields in a similar way in your ``models.py`` file.
 
@@ -697,7 +697,7 @@ For more information, refer to the
 10. Create the admin
 ====================
 
-Refer to the `admin.py file of the sample app <https://github.com/openwisp/openwisp-ipam/tree/master/tests/openwisp2/sample_ipam/admin.py>`_.
+Refer to the `admin.py file of the sample app <https://github.com/burlesquer/openwisp-ipam/tree/master/tests/openwisp2/sample_ipam/admin.py>`_.
 
 To introduce changes to the admin, you can do it in two main ways which are described below.
 
@@ -778,7 +778,7 @@ you're introducing are not breaking some of the existing features of *openwisp-i
 In case you need to add breaking changes, you can overwrite the tests defined
 in the base classes to test your own behavior.
 
-See the `tests of the sample app <https://github.com/openwisp/openwisp-ipam/tree/master/tests/openwisp2/sample_ipam/tests.py>`_
+See the `tests of the sample app <https://github.com/burlesquer/openwisp-ipam/tree/master/tests/openwisp2/sample_ipam/tests.py>`_
 to find out how to do this.
 
 You can then run tests with::
@@ -803,7 +803,7 @@ The API view classes can be extended into other django applications as well. Not
 that it is not required for extending openwisp-ipam to your app and this change
 is required only if you plan to make changes to the API views.
 
-Create a view file as done in `views.py <https://github.com/openwisp/openwisp-ipam/tree/master/tests/openwisp2/sample_ipam/views.py>`_.
+Create a view file as done in `views.py <https://github.com/burlesquer/openwisp-ipam/tree/master/tests/openwisp2/sample_ipam/views.py>`_.
 
 For more information about django views, please refer to the `views section in the django documentation <https://docs.djangoproject.com/en/dev/topics/http/views/>`_.
 
@@ -813,5 +813,5 @@ Contributing
 Please refer to the `OpenWISP contributing guidelines <http://openwisp.io/docs/developer/contributing.html>`_.
 
 `Support channels <http://openwisp.org/support.html>`_ |
-`Issue Tracker <https://github.com/openwisp/openwisp-ipam/issues>`_ |
-`License <https://github.com/openwisp/openwisp-ipam/blob/master/LICENSE>`_
+`Issue Tracker <https://github.com/burlesquer/openwisp-ipam/issues>`_ |
+`License <https://github.com/burlesquer/openwisp-ipam/blob/master/LICENSE>`_
